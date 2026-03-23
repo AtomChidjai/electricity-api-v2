@@ -68,4 +68,9 @@ app.get('/api/users/:province/:year', (req, res) => {
         province.toLowerCase() && d.year === parseInt(year));
     res.json(result || { message: "Data not found" });
 });
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+if (process.env.NODE_ENV !== 'test') {
+ app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+}
+
+module.exports = app;
