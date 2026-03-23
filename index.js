@@ -40,7 +40,8 @@ app.get('/api/usage-history/:province', (req, res) => {
     const { province } = req.params;
     const data = loadData('electricity_usages_en.json');
     const result = data.filter(d => d.province_name.toLowerCase() === province.toLowerCase());
-    res.json(result);
+    // res.json(result);
+    res.json({error: "broken" }) // failed case
 });
 
 // 6. API: User history for a specific province
