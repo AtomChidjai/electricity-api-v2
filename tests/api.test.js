@@ -3,7 +3,6 @@ const app = require('../index');
 
 describe('Electricity API Test Suite', () => {
     // API 1: Total electricity usages for each year
-    // Endpoint: GET /api/usage/total-by-year
     describe('API 1: GET /api/usage/total-by-year', () => {
         it('VALID: should return total electricity usage for each year', async () => {
             const res = await request(app).get('/api/usage/total-by-year');
@@ -20,7 +19,6 @@ describe('Electricity API Test Suite', () => {
     });
 
     // API 2: Total electricity users for each year
-    // Endpoint: GET /api/users/total-by-year
     describe('API 2: GET /api/users/total-by-year', () => {
         it('VALID: should return total electricity users for each year', async () => {
             const res = await request(app).get('/api/users/total-by-year');
@@ -37,7 +35,6 @@ describe('Electricity API Test Suite', () => {
     });
 
     // API 3: Usage of specific province by specific year
-    // Endpoint: GET /api/usage/:province/:year
     describe('API 3: GET /api/usage/:province/:year', () => {
         it('VALID: should return usage data for Bangkok year 2566', async () => {
             const res = await request(app).get('/api/usage/Bangkok/2566');
@@ -55,7 +52,6 @@ describe('Electricity API Test Suite', () => {
     });
 
     // API 4: Users of specific province by specific year
-    // Endpoint: GET /api/users/:province/:year
     describe('API 4: GET /api/users/:province/:year', () => {
         it('VALID: should return user data for Bangkok year 2566', async () => {
             const res = await request(app).get('/api/users/Bangkok/2566');
@@ -73,7 +69,6 @@ describe('Electricity API Test Suite', () => {
     });
 
     // API 5: Usage history by specific province
-    // Endpoint: GET /api/usage-history/:province
     describe('API 5: GET /api/usage-history/:province', () => {
         it('VALID: should return usage history for Bangkok', async () => {
             const res = await request(app).get('/api/usage-history/Bangkok');
@@ -92,7 +87,6 @@ describe('Electricity API Test Suite', () => {
     });
 
     // API 6: User history by specific province
-    // Endpoint: GET /api/users-history/:province
     describe('API 6: GET /api/users-history/:province', () => {
         it('VALID: should return user history for Krabi', async () => {
             const res = await request(app).get('/api/users-history/Krabi');
